@@ -1,0 +1,82 @@
+.form-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Include padding and border in element's dimensions */
+  overflow: hidden; /* Ensure no overflow within the form-container */
+}
+
+form {
+  width: 360px;
+  padding: 20px;
+  border: 1px solid rgb(157, 53, 70);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(110, 25, 25, 0.1);
+  box-sizing: border-box; /* Include padding and border in element's dimensions */
+}
+
+form h2 {
+  margin-bottom: 5px;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+}
+
+form .field {
+  margin-bottom: 15px;
+}
+
+form .field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form .field input[type="email"],
+form .field input[type="password"] {
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: 1px solid #121111;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+form button[disabled] {
+  background-color: #d3d3d3;
+  color: #2b1818;
+  cursor: not-allowed;
+}
+
+form .error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+#body {
+  background: linear-gradient(to right, #ffffff, #e0e0e0);
+  height: 100vh; 
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+  position: fixed;
+}

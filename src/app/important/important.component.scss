@@ -1,0 +1,24 @@
+.important-tasks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .task-card {
+    margin-bottom: 20px;
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    border-radius: 5px; 
+    width: 50%; 
+  }
+  .heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+  
+  .important-tasks-heading {
+    text-align: center;
+  }
+  

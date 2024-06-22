@@ -1,0 +1,66 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="task-form">
+    <app-input label="Title                   :   " type="text" inputId="title" controlName="title"
+        class="form-control"></app-input>
+    <span *ngIf="taskForm.get('title').invalid && taskForm.get('title').touched" class="error-message">
+        Title is required.
+    </span>
+    <app-input label="Priority:" type="number" inputId="priority" controlName="priority"
+        class="form-control"></app-input>
+    <span *ngIf="taskForm.get('priority').invalid && taskForm.get('priority').touched" class="error-message">
+        Priority should only contain numbers.
+    </span>
+    <app-input label="Description:" type="text" inputId="description" controlName="description"
+        class="form-control"></app-input>
+    <span *ngIf="taskForm.get('description').invalid && taskForm.get('description').touched" class="error-message">
+        Description is required.
+    </span>
+    <label for="dueDate">Due Date:</label>
+    <input type="date" id="dueDate" formControlName="dueDate" class="form-control">
+    <label for="important" class="checkbox-label">Mark as Important:</label>
+    <input type="checkbox" id="important" formControlName="important" class="checkbox-input">
+    <button type="submit" class="submit-button">Create</button>
+</form>
+
+
+<div class="task-display" *ngIf="flag">Your Tasks</div>
+<div *ngFor="let task of tasks" class="task-card">
+    <div *ngIf="!task.editing">
+        <div>
+            <strong>ID:</strong> {{ task.id }}
+        </div>
+        <div>
+            <strong>Title:</strong> {{ task.title }}
+        </div>
+        <div>
+            <strong>Priority:</strong> {{ task.priority }}
+        </div>
+        <div>
+            <strong>Description:</strong> {{ task.description }}
+        </div>
+        <div>
+            <strong>Due Date:</strong> {{ task.dueDate | date: 'mediumDate' }}
+        </div>
+        <div>
+            <strong>Important:</strong> {{ task.important ? 'Yes' : 'No' }}
+        </div>
+        <div>
+            <button (click)="editTask(task)">Edit</button>
+            <button (click)="deleteTask(task.id, task)">Delete</button>
+        </div>
+    </div>
+    <div *ngIf="task.editing">
+        <form [formGroup]="editTaskForm" (ngSubmit)="onEditSubmit(task)" class="task-form">
+            <app-input label="Title:" type="text" inputId="editTitle" controlName="editTitle"
+                class="form-control"></app-input>
+            <app-input label="Priority:" type="text" inputId="editPriority" controlName="editPriority"
+                class="form-control"></app-input>
+            <app-input label="Description:" type="text" inputId="editDescription" controlName="editDescription"
+                class="form-control"></app-input>
+            <label for="editDueDate">Due Date:</label>
+            <input type="date" id="editDueDate" formControlName="editDueDate" class="form-control">
+            <label for="editImportant" class="checkbox-label">Mark as Important:</label>
+            <input type="checkbox" id="editImportant" formControlName="editImportant" class="checkbox-input">
+            <button type="submit" class="submit-button">Update</button>
+        </form>
+    </div>
+</div>

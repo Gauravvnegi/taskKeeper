@@ -1,0 +1,28 @@
+<div class="heading-container">
+    <h1 class="important-tasks-heading">Important Tasks</h1>
+</div>
+
+<div class="important-tasks-container">
+    <div *ngFor="let task of importantTasks" class="task-card">
+        <!-- <div *ngIf="task.important === true && task.deleted===false"> -->
+        <div>
+            <strong>Title:</strong> {{ task.title }}
+        </div>
+        <div>
+            <strong>ID:</strong> {{ task.id }}
+        </div>
+        <div>
+            <strong>Priority:</strong> {{ task.priority }}
+        </div>
+        <div>
+            <strong>Description:</strong> {{ task.description }}
+        </div>
+        <div>
+            <strong>Due Date:</strong> {{ task.dueDate | date: 'mediumDate' }}
+        </div>
+        <div>
+            <strong>Important:</strong> {{task.important}}
+        </div>
+        <!-- </div> -->
+    </div>
+</div>

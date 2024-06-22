@@ -1,0 +1,33 @@
+<h1 class="deleted-items-header">Deleted Items</h1>
+
+<div class="deleted-items-container">
+    <div *ngFor="let task of deletedTasks" class="task-card">
+        <div>
+            <div>
+                <strong>ID:</strong> {{ task.id }}
+            </div>
+            <div>
+                <strong>Title:</strong> {{ task.title }}
+            </div>
+            <div>
+                <strong>Priority:</strong> {{ task.priority }}
+            </div>
+            <div>
+                <strong>Description:</strong> {{ task.description }}
+            </div>
+            <div>
+                <strong>Due Date:</strong> {{ task.dueDate |date: 'mediumDate' }}
+            </div>
+            <div>
+                <strong>Important:</strong> {{ task.important ? 'Yes' : 'No' }}
+            </div>
+            <!-- <div>
+                <strong>status:</strong> {{ task.status }}
+            </div> -->
+            <div>
+                <button (click)="restoreTask(task)">Restore</button>
+                <button (click)="deletePermanently(task)">Delete Permanently</button>
+            </div>
+        </div>
+    </div>
+</div>
