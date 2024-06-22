@@ -27,6 +27,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+#DEMO VIDEO -
+
+
+https://github.com/Gauravvnegi/taskKeeper/assets/92495217/2db00edb-b927-4a8c-883b-fc37cb5f19cf
+
+Login Detail - 
+1. Used  dummy API for valid user authentication https://dummyjson.com/auth/login
+   this api consists of many user one you can try to login the Task Management is
+   // username: 'emilys',
+   // password: 'emilyspass'
+2. Try Above username and password to login or any user from api 
 #demo Screenshots --
 Login - 
 
