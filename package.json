@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "install": "npm install --force",
+    "install": "npm install --legacy-peer-depsgit ",
     "build": "ng build prod",
     "test": "ng test",
     "lint": "ng lint",
