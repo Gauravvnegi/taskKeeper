@@ -11,10 +11,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
-
+ng build --prod
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
+npm install --legacy-peer-deps
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
@@ -27,6 +27,7 @@ comprehensive task management.
 – Tasks can be marked as important, providing users with a prioritization option and enabling them to search tasks based on priority
 – Leverages BehaviorSubject and Observable from RxJS to efficiently manage and update task data, ensuring real-time
 responsiveness for users.
+
 #DEMO VIDEO -
 
 
