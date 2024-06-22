@@ -27,6 +27,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+#Project Aim-
+The project focuses on robust user authentication mechanisms to ensure only authorized users can access its features.
+– Utilizes Angular's HttpClient module effectively to facilitate communication with the backend API for user authentication and
+comprehensive task management.
+– It offers a comprehensive set of task-keeping functionalities, including task creation, editing, deletion, and restoration.
+– Tasks can be marked as important, providing users with a prioritization option and enabling them to search tasks based on priority
+– Leverages BehaviorSubject and Observable from RxJS to efficiently manage and update task data, ensuring real-time
+responsiveness for users.
 #DEMO VIDEO -
 
 
@@ -37,7 +45,27 @@ Login Detail -
    this api consists of many user one you can try to login the Task Management is
    // username: 'emilys',
    // password: 'emilyspass'
-2. Try Above username and password to login or any user from api 
+2. Try Above username and password to login or any user from api .
+3. some of valid user you can try from API-
+   Emily Johnson
+
+    Username: emilys
+    Password: emilyspass
+    Michael Williams
+    
+    Username: michaelw
+    Password: michaelwpass
+    Sophia Brown
+    
+    Username: sophiab
+    Password: sophiabpass
+    James Davis
+    
+    Username: jamesd
+    Password: jamesdpass
+
+
+#Live Link - https://remarkable-cuchufli-802f26.netlify.app/login
 #demo Screenshots --
 Login - 
 
